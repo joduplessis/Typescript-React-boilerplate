@@ -1,5 +1,5 @@
 # Typescript & React boilerplate
-Typescript, React, Redux, Jest & Webpack boilerplate project. Stripped out from one of the projects we did - kept as a reference for getting the difference parts talking to each other.
+Typescript, React, Redux, Jest & Webpack boilerplate project. Stripped out from one of the projects we did - kept as a reference for getting the difference parts talking to each other. This also includes running a GitLab CI runner and pushing to an FTP destination (which seemed very under-documented).
 
 ## Notes
 Gulp is used for building the styles (just a preference).
