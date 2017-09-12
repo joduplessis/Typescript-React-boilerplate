@@ -1,0 +1,39 @@
+image: node:7
+
+before_script:
+  - npm install
+  - apt-get update
+  - apt-get install -y lftp
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm run test
+  only:
+    - master
+
+build:
+  stage: build
+  script:
+    - npm run build-production # The production build is used here because the API paths are build specific
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  script:
+    - lftp -u USERNAME,PASSWORD FTP_URL -e "mirror -e -R -p ./dist/ public_html/staging ; quit"
+  environment:
+    name: staging
+    url: STAGING_URL
+  only:
+    - master

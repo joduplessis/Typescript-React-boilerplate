@@ -1,0 +1,21 @@
+{
+  "name": "Typescript & React boilerplate",
+  "description": "Typescript, React, Redux, Jest & Webpack boilerplate project.",
+  "main": "index.js",
+  "authors": [
+    "Jo du Plessis"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/joduplessis/Typescript-React-boilerplate",
+  "private": true,
+  "directory" : "/dist",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
